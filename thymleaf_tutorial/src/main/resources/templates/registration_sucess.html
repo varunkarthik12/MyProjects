@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th = "http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration sucessful</title>
+</head>
+<body>
+<div align = "center">
+    <div style = "border-style:solid; width:500px">
+        <h5>Registration Successful for the user :</h5>
+        <br />
+        <div th:object ="${reg_sucessful_dtls}">
+            <p th:text ="*{name}"></p> <br />
+            <p th:text ="*{gender}"></p> <br />
+            <p th:text ="*{profession}"></p> <br />
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

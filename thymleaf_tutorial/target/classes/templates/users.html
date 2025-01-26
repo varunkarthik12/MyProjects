@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th = "http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>user data</title>
+</head>
+<body>
+<table border = "2">
+    <thead>
+        <th>user Name</th>
+        <th>email</th>
+        <th>role</th>
+        <th>Gender</th>
+    </thead>
+    <tbody>
+    <tr th:object = "${user}">
+        <td th:text ="*{name}"></td>
+        <td th:text = "*{email}"></td>
+        <td th:text = "*{role}"></td>
+        <td th:text = "*{gender}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
