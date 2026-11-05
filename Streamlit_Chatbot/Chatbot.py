@@ -6,7 +6,8 @@ import streamlit as st
 from langchain_groq import ChatGroq
 import strparser
 
-load_dotenv()
+#load_dotenv()
+GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", os.getenv("GROQ_API_KEY"))
 
 st.title("💬 Generative AI Chat Bot")
 
@@ -28,6 +29,7 @@ for message in st.session_state.chat_history:
 llm = ChatGroq(
     model = "openai/gpt-oss-20b",
     temperature = 0.0
+    api_key=GROQ_API_KEY
 )
 
 user_prompt:str = st.chat_input("Ask ChatBot......");
