@@ -28,7 +28,7 @@ for message in st.session_state.chat_history:
 
 llm = ChatGroq(
     model = "openai/gpt-oss-20b",
-    temperature = 0.0
+    temperature = 0.0,
     api_key=GROQ_API_KEY
 )
 
